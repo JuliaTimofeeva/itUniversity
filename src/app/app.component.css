@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-color: #dcdcdc;
+  height: 100px; }
+  header .name {
+    padding-left: 50px;
+    padding-top: 10px; }
+
+nav {
+  text-align: right;
+  padding-right: 300px; }
+  nav li {
+    display: inline-block; }
+    nav li:hover {
+      color: #e33f0e; }
+
+main {
+  background-color: #f9f6f6; }
+  main h2, main h3 {
+    color: #e33f0e; }
+  main hr {
+    color: #e33f0e;
+    border: none;
+    background-color: #e33f0e;
+    height: 2px;
+    width: 30px; }
+  main .aboutMe {
+    display: flex;
+    height: 400px;
+    padding-top: 50px;
+    justify-content: center;
+    width: 900px;
+    margin: 0 auto; }
+    main .aboutMe img {
+      width: 450px; }
+    main .aboutMe .description {
+      width: 450px;
+      background-color: #dcdcdc;
+      padding-left: 15px;
+      padding-top: 10px; }
+  main .container {
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    padding-top: 50px;
+    width: 900px;
+    margin: 0 auto;
+    padding-bottom: 50px; }
+    main .container .col {
+      width: 280px;
+      background-color: #dcdcdc;
+      padding-left: 15px;
+      padding-top: 10px; }
+
+footer {
+  background-color: #dcdcdc;
+  height: 100px; }
+  footer li {
+    display: inline-block; }
+  footer .follow {
+    text-align: right;
+    padding-right: 300px;
+    padding-top: 10px; }
+
+/*# sourceMappingURL=app.component.css.map */

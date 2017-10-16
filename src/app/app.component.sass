@@ -1,0 +1,78 @@
+$color-header: #dcdcdc
+$color-caption:#e33f0e
+$color-main:#f9f6f6
+
+*
+  margin: 0
+  padding: 0
+
+header
+  background-color: $color-header
+  height: 100px
+  .name
+    padding-left: 50px
+    padding-top: 10px
+
+nav
+  text-align: right
+  padding-right: 300px
+  li
+    display: inline-block
+    &:hover
+      color: $color-caption
+
+main
+  background-color: $color-main
+  h2,h3
+    color: $color-caption
+  hr
+    color: $color-caption
+    border: none
+    background-color: $color-caption
+    height: 2px
+    width: 30px
+  .aboutMe
+    display: flex
+    height: 400px
+    padding-top: 50px
+    justify-content: center
+    width: 900px
+    margin: 0 auto
+    img
+      width: 450px
+    .description
+      width: 450px
+      background-color: $color-header
+      padding-left: 15px
+      padding-top: 10px
+  .container
+    display: flex
+    height: 500px
+    justify-content: space-between
+    padding-top: 50px
+    width: 900px
+    margin: 0 auto
+    padding-bottom: 50px
+    .col
+      width: 280px
+      background-color: $color-header
+      padding-left: 15px
+      padding-top: 10px
+
+footer
+  background-color: $color-header
+  height: 100px
+  li
+    display: inline-block
+  .follow
+    text-align: right
+    padding-right: 300px
+    padding-top: 10px
+
+
+
+
+
+
+
+
