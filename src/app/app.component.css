@@ -7,26 +7,37 @@ header {
   height: 100px; }
   header .name {
     padding-left: 50px;
-    padding-top: 10px; }
+    padding-top: 10px;
+    font-family: "Cambo", serif; }
 
 nav {
   text-align: right;
-  padding-right: 300px; }
+  padding-right: 300px;
+  font-family: "Cambo", serif; }
   nav li {
-    display: inline-block; }
+    display: inline-block;
+    border-right: solid 2px #e33f0e;
+    padding-right: 10px; }
     nav li:hover {
       color: #e33f0e; }
+    nav li:last-child {
+      border-right: none; }
 
 main {
-  background-color: #f9f6f6; }
+  background-color: #f9f6f6;
+  font-family: "Open Sans Condensed", sans-serif; }
   main h2, main h3 {
-    color: #e33f0e; }
+    color: #e33f0e;
+    font-family: "Cambo", serif;
+    font-size: 25px; }
   main hr {
     color: #e33f0e;
     border: none;
     background-color: #e33f0e;
     height: 2px;
-    width: 30px; }
+    width: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
   main .aboutMe {
     display: flex;
     height: 400px;
@@ -40,7 +51,9 @@ main {
       width: 450px;
       background-color: #dcdcdc;
       padding-left: 15px;
-      padding-top: 10px; }
+      padding-top: 10px;
+      font-weight: bold;
+      font-size: 20px; }
   main .container {
     display: flex;
     height: 500px;
@@ -57,7 +70,8 @@ main {
 
 footer {
   background-color: #dcdcdc;
-  height: 100px; }
+  height: 100px;
+  font-family: "Cambo", serif; }
   footer li {
     display: inline-block; }
   footer .follow {
