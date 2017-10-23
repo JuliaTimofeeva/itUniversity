@@ -1,0 +1,25 @@
+$color-header: #dcdcdc
+$color-caption:#e33f0e
+*
+  margin: 0
+  padding: 0
+header
+  background-color: $color-header
+  height: 100px
+  .name
+    padding-left: 50px
+    padding-top: 10px
+    font-family: 'Cambo', serif
+
+nav
+  text-align: right
+  padding-right: 300px
+  font-family: 'Cambo', serif
+  li
+    display: inline-block
+    border-right: solid 2px $color-caption
+    padding-right: 10px
+    &:hover
+      color: $color-caption
+    &:last-child
+      border-right: none

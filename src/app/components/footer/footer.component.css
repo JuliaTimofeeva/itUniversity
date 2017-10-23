@@ -1,0 +1,12 @@
+footer {
+  background-color: #dcdcdc;
+  height: 100px;
+  font-family: "Cambo", serif; }
+  footer li {
+    display: inline-block; }
+  footer .follow {
+    text-align: right;
+    padding-right: 300px;
+    padding-top: 10px; }
+
+/*# sourceMappingURL=footer.component.css.map */

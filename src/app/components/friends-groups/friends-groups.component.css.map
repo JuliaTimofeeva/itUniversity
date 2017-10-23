@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAI;EACA,KAAK,EAAE,KAAK;EACZ,gBAAgB,EAJL,OAAO;EAKlB,YAAY,EAAE,IAAI;EAClB,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,KAAK",
+"sources": ["friends-groups.component.sass"],
+"names": [],
+"file": "friends-groups.component.css"
+}

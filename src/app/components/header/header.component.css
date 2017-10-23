@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-color: #dcdcdc;
+  height: 100px; }
+  header .name {
+    padding-left: 50px;
+    padding-top: 10px;
+    font-family: "Cambo", serif; }
+
+nav {
+  text-align: right;
+  padding-right: 300px;
+  font-family: "Cambo", serif; }
+  nav li {
+    display: inline-block;
+    border-right: solid 2px #e33f0e;
+    padding-right: 10px; }
+    nav li:hover {
+      color: #e33f0e; }
+    nav li:last-child {
+      border-right: none; }
+
+/*# sourceMappingURL=header.component.css.map */
