@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+main {
+  background-color: #f9f6f6;
+  font-family: "Open Sans Condensed", sans-serif; }
+  main .container {
+    display: flex;
+    height: 600px;
+    justify-content: space-between;
+    padding-top: 50px;
+    width: 615px;
+    margin: 0 auto;
+    padding-bottom: 50px; }
+
+/*# sourceMappingURL=wall-page.component.css.map */

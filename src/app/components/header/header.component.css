@@ -3,21 +3,23 @@
   padding: 0; }
 
 header {
-  background-color: #dcdcdc;
-  height: 100px; }
-  header .name {
-    padding-left: 50px;
-    padding-top: 10px;
-    font-family: "Cambo", serif; }
+  background-color: #dcdcdc; }
+
+img {
+  height: 150px;
+  margin-left: 150px; }
 
 nav {
   text-align: right;
   padding-right: 300px;
-  font-family: "Cambo", serif; }
+  font-family: "Cambo", serif;
+  float: right;
+  margin-top: 120px; }
   nav li {
     display: inline-block;
     border-right: solid 2px #e33f0e;
-    padding-right: 10px; }
+    padding-right: 10px;
+    margin-bottom: 5px; }
     nav li:hover {
       color: #e33f0e; }
     nav li:last-child {

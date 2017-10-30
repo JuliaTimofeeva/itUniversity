@@ -1,9 +1,21 @@
+.tabs {
+  text-align: center;
+  background-color: white;
+  width: 615px;
+  margin: 0 auto; }
+  .tabs ul {
+    margin-top: 0; }
+  .tabs li {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 15px; }
+
 .aboutMe {
   display: flex;
-  height: 400px;
+  height: 300px;
   padding-top: 50px;
   justify-content: center;
-  width: 900px;
+  width: 700px;
   margin: 0 auto; }
   .aboutMe hr {
     color: #e33f0e;
@@ -15,15 +27,21 @@
     margin-left: 0;
     margin-top: 0; }
   .aboutMe img {
-    width: 450px; }
+    width: 300px;
+    height: 300px;
+    margin-bottom: 0; }
   .aboutMe .description {
-    width: 450px;
+    width: 300px;
     background-color: #dcdcdc;
     padding-left: 15px;
     padding-top: 10px;
     font-weight: bold;
-    font-size: 20px; }
-  .aboutMe h2 {
+    font-size: 20px;
+    margin-bottom: 0; }
+  .aboutMe h1, .aboutMe h2 {
+    margin: 0;
+    padding: 0; }
+  .aboutMe h3 {
     color: #e33f0e;
     font-family: "Cambo", serif;
     font-size: 25px;
