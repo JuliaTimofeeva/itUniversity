@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WallPageComponent implements OnInit {
 
+  post: string;
+  posts = [];
+
+  onClick(){
+    this.posts.push({name: this.post});
+    this.post = '';
+  }
   constructor() { }
 
   ngOnInit() {

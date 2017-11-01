@@ -11,12 +11,17 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FriendPageComponent } from './friend-page/friend-page.component';
 import { GroupPageComponent } from './group-page/group-page.component';
 import { WallPageComponent } from './wall-page/wall-page.component';
+import {FormsModule} from '@angular/forms';
+import { SettingPageComponent } from './setting-page/setting-page.component';
+
+
 
 const routes = [
   {path:'',component: WallPageComponent},
   {path:'friend-page',component: FriendPageComponent},
   {path:'group-page', component: GroupPageComponent},
-  {path:'wall-page', component: WallPageComponent}
+  {path:'wall-page', component: WallPageComponent},
+  {path:'setting-page', component: SettingPageComponent}
 ];
 @NgModule({
   declarations: [
@@ -29,10 +34,13 @@ const routes = [
     FriendPageComponent,
     GroupPageComponent,
     WallPageComponent,
+    SettingPageComponent
+
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

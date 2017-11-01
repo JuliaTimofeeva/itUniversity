@@ -38,7 +38,11 @@
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 0; }
-  .aboutMe h1, .aboutMe h2 {
+  .aboutMe h1 {
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+  .aboutMe h2 {
     margin: 0;
     padding: 0; }
   .aboutMe h3 {

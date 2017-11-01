@@ -11,6 +11,22 @@ export class PersonalInformationComponent implements OnInit {
 
 
   ngOnInit() {
+    var name = localStorage.getItem('name');
+    var surname = localStorage.getItem('surname');
+    var nickname = localStorage.getItem('nickname');
+    if (name != null){
+      this.name = name;
+    }
+    if (surname != null){
+      this.surname = surname;
+    }
+    if (nickname != null){
+      this.nickname = nickname;
+    }
   }
+
+  name;
+  surname;
+  nickname;
 
 }

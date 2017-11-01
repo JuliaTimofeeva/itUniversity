@@ -1,6 +1,14 @@
 <main>
   <app-personal-information></app-personal-information>
-  <!--<div class ="container">-->
-    <!--<app-friends-groups nameColumn='My groups'></app-friends-groups>-->
-  <!--</div>-->
+  <div class = "entry-post">
+    <textarea class="entry" placeholder="enter" [(ngModel)]="post"></textarea>
+    <button  (click)="onClick()">
+      SEND
+    </button>
+  </div>
+  <div class = "posts" *ngFor="let post of posts">
+    <ul>
+      <li>{{post.name}}</li>
+    </ul>
+  </div>
 </main>
