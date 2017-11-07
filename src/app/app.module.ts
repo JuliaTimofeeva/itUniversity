@@ -13,6 +13,7 @@ import { GroupPageComponent } from './group-page/group-page.component';
 import { WallPageComponent } from './wall-page/wall-page.component';
 import {FormsModule} from '@angular/forms';
 import { SettingPageComponent } from './setting-page/setting-page.component';
+// import 'b'
 
 
 

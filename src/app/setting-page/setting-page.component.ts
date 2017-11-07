@@ -12,6 +12,8 @@ export class SettingPageComponent implements OnInit {
   name;
   surname;
   nickname;
+  bfn;
+  avatar;
 
   constructor(private ls:LSService) { }
 
@@ -19,6 +21,7 @@ export class SettingPageComponent implements OnInit {
     var name = this.ls.getItemFromLS('name');
     var surname = this.ls.getItemFromLS('surname');
     var nickname = this.ls.getItemFromLS('nickname');
+    //var avatar = this.ls.getItemFromLS('avatar');
     if (name != null){
       this.name = name;
     }
@@ -33,27 +36,25 @@ export class SettingPageComponent implements OnInit {
     this.ls.setItemToLS('name', this.name);
     this.ls.setItemToLS('surname',this.surname);
     this.ls.setItemToLS('nickname', this.nickname);
+    this.ls.setItemToLS("photo",this.avatar);
+
   }
 
-  // getBase64Image(img) {
-  //   var canvas = document.createElement("canvas");
-  //   canvas.width = img.width;
-  //   canvas.height = img.height;
-  //
-  //   var ctx = canvas.getContext("2d");
-  //   ctx.drawImage(img, 0, 0);
-  //
-  //   var dataURL = canvas.toDataURL("image/png");
-  //
-  //   return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-  // }
-  //
-  // onSaveImg(){
-  //   var input = document.getElementById("filein");
-  //   debugger;
-  //   console.log(input.getAttribute('files')[0]);
-  //   // var imgData = this.getBase64Image(input.getAttribute('files')[0]);
-  //   // localStorage.setItem("imgData", imgData);
-  // }
+  fileChange(event){
 
+    let fileList: FileList = event.target.files;
+    var reader = new FileReader();
+    if(fileList.length > 0) {
+      let file: File = fileList[0];
+
+      reader.readAsDataURL(file);
+      reader.onload = (function () {
+        var readURL = reader.result;
+        //this.bfn = readURL;
+        this.ls.setItemToLS("photo",readURL);
+
+      }).bind(this);
+
+    }
+  };
 }

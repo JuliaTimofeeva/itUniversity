@@ -1,19 +1,24 @@
 import { Component, OnInit} from '@angular/core';
+import {LSService} from '../../LSService';
 
 @Component({
   selector: 'app-personal-information',
   templateUrl: './personal-information.component.html',
-  styleUrls: ['./personal-information.component.css']
+  styleUrls: ['./personal-information.component.css'],
+  providers: [LSService]
 })
 export class PersonalInformationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ls:LSService) { }
 
 
   ngOnInit() {
-    var name = localStorage.getItem('name');
-    var surname = localStorage.getItem('surname');
-    var nickname = localStorage.getItem('nickname');
+    var name = this.ls.getItemFromLS('name');
+    var surname = this.ls.getItemFromLS('surname');
+    var nickname = this.ls.getItemFromLS('nickname');
+    var avatar = this.ls.getItemFromLS('photo');
+
+    this.avatar = avatar;
     if (name != null){
       this.name = name;
     }
@@ -28,5 +33,6 @@ export class PersonalInformationComponent implements OnInit {
   name;
   surname;
   nickname;
+  avatar;
 
 }

@@ -5,9 +5,8 @@
 <label>Nickname</label>
 <input class = "change-nickname" type="text" [(ngModel)]="nickname"/>
 
-<form enctype="multipart/form-data" method="post">
-  <p><input id="filein" type="file" name="f">
-    <input type="submit" value="Отправить" (click)="onSaveImg()"></p>
-</form>
-
 <button id ="save" (click)="onSave()">Сохранить</button>
+
+<input type="file"  (change)="fileChange($event)" />
+<!--<div id="res"></div>-->
+<img id='output' src="{{bfn}}">
