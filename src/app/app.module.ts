@@ -13,7 +13,8 @@ import { GroupPageComponent } from './group-page/group-page.component';
 import { WallPageComponent } from './wall-page/wall-page.component';
 import {FormsModule} from '@angular/forms';
 import { SettingPageComponent } from './setting-page/setting-page.component';
-// import 'b'
+import { LoginPageComponent } from './login-page/login-page.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 
@@ -22,7 +23,8 @@ const routes = [
   {path:'friend-page',component: FriendPageComponent},
   {path:'group-page', component: GroupPageComponent},
   {path:'wall-page', component: WallPageComponent},
-  {path:'setting-page', component: SettingPageComponent}
+  {path:'setting-page', component: SettingPageComponent},
+  {path:'login-page', component: LoginPageComponent}
 ];
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ const routes = [
     FriendPageComponent,
     GroupPageComponent,
     WallPageComponent,
-    SettingPageComponent
+    SettingPageComponent,
+    LoginPageComponent,
+    MenuComponent
 
   ],
   imports: [

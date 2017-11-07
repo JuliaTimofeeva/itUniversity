@@ -16,7 +16,8 @@
   padding-top: 50px;
   justify-content: center;
   width: 700px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  clear: both; }
   .aboutMe hr {
     color: #e33f0e;
     border: none;
