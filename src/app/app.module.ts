@@ -15,6 +15,8 @@ import {FormsModule} from '@angular/forms';
 import { SettingPageComponent } from './setting-page/setting-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MenuComponent } from './components/menu/menu.component';
+import {AuthModule} from "./auth/auth.module";
+import {AppRoutingModule} from "./app-routing.module";
 
 
 
@@ -39,13 +41,15 @@ const routes = [
     WallPageComponent,
     SettingPageComponent,
     LoginPageComponent,
-    MenuComponent
+    MenuComponent,
 
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    AuthModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
