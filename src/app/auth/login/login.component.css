@@ -1,0 +1,10 @@
+@import url(~bootstrap/dist/css/bootstrap.min.css);
+form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 0; }
+  form .form-help-text {
+    color: red;
+    opacity: 0.3; }
+
+/*# sourceMappingURL=login.component.css.map */
