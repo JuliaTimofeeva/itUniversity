@@ -3,6 +3,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UsersService} from "../../users/users.service";
 import {User} from "../../users/user.module";
 import {Message} from "./message.module";
+import {AuthService} from "../auth.sevice";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -15,7 +17,9 @@ export class LoginComponent implements OnInit {
   message: Message;
 
   constructor(
-    private usersService: UsersService
+    private usersService: UsersService,
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -43,13 +47,15 @@ export class LoginComponent implements OnInit {
         console.log(user);
         if(user){
           if(user.password === formData.password){
+            this.message.text = '';
+            window.localStorage.setItem('user',JSON.stringify(user));
             //logic
+            this.authService.login();
+            // this.router.navigate(['']);
           }else{
             this.showMessage("Неверный пароль")
           }
-
         }else{
-
           this.showMessage("Такого пользователя не существует");
         }
       });

@@ -19,6 +19,7 @@ import {AuthModule} from "./auth/auth.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {UsersService} from "./users/users.service";
 import {Http, HttpModule} from "@angular/http";
+import {AuthService} from "./auth/auth.sevice";
 
 
 
@@ -54,7 +55,7 @@ const routes = [
     AppRoutingModule,
     HttpModule
   ],
-  providers: [UsersService],
+  providers: [UsersService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
