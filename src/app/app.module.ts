@@ -17,6 +17,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {AuthModule} from "./auth/auth.module";
 import {AppRoutingModule} from "./app-routing.module";
+import {UsersService} from "./users/users.service";
+import {Http, HttpModule} from "@angular/http";
 
 
 
@@ -49,9 +51,10 @@ const routes = [
     RouterModule.forRoot(routes),
     FormsModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
