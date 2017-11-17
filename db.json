@@ -3,7 +3,31 @@
     {
       "id": 1,
       "email": "email@email.ru",
-      "password": "123456"
+      "password": "123456",
+      "name": "Юля"
+    },
+    {
+      "email": "ulehka24fev@rambler.ru",
+      "password": "1234567",
+      "id": "xcgh"
+    },
+    {
+      "email": "ulehka24fev@rambler.ru",
+      "password": "1234567890",
+      "name": "sdfvgh",
+      "id": 2
+    },
+    {
+      "email": "ulehka24fev@rambler.ru",
+      "password": "12345678",
+      "name": "sdfghj",
+      "id": 3
+    },
+    {
+      "email": "drgtdrt@gfa.ru",
+      "password": "1234567",
+      "name": "sdfghj",
+      "id": 4
     }
   ],
   "posts": [
@@ -23,5 +47,4 @@
   "profile": {
     "name": "typicode"
   }
-
 }
