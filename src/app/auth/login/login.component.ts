@@ -46,32 +46,34 @@ export class LoginComponent implements OnInit {
 }
   onSubmit(){
 
-    console.log(this.form);
-    const formData = this.form.value;
+    this.usersService.test();
 
-    this.usersService.getUserByEmail(formData.email)
-      .subscribe((user: User)=>{
-        console.log(user);
-        if(user){
-          if(user.password === formData.password){
-            this.message.text = '';
-            window.localStorage.setItem('user',JSON.stringify(user));
-            //logic
-            this.authService.login();
-             this.router.navigate(['/wall-page']);
-          }else{
-            this.showMessage({
-              text:"Неверный пароль",
-              type: 'danger'
-            })
-          }
-        }else{
-          this.showMessage({
-            text:"Такого пользователя не существует",
-            type: 'danger'
-          });
-        }
-      });
+    // console.log(this.form);
+    // const formData = this.form.value;
+    //
+    // this.usersService.getUserByEmail(formData.email)
+    //   .subscribe((user: User)=>{
+    //     console.log(user);
+    //     if(user){
+    //       if(user.password === formData.password){
+    //         this.message.text = '';
+    //         window.localStorage.setItem('user',JSON.stringify(user));
+    //         //logic
+    //         this.authService.login();
+    //          this.router.navigate(['/wall-page']);
+    //       }else{
+    //         this.showMessage({
+    //           text:"Неверный пароль",
+    //           type: 'danger'
+    //         })
+    //       }
+    //     }else{
+    //       this.showMessage({
+    //         text:"Такого пользователя не существует",
+    //         type: 'danger'
+    //       });
+    //     }
+    //   });
 
 
 
