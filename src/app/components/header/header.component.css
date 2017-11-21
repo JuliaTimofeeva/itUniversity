@@ -9,4 +9,12 @@ img {
   height: 150px;
   margin-left: 150px; }
 
+a {
+  float: right;
+  margin-top: 120px;
+  margin-right: 100px; }
+  a:hover {
+    color: blue;
+    background-color: white; }
+
 /*# sourceMappingURL=header.component.css.map */

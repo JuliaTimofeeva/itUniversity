@@ -1,3 +1,7 @@
 <header>
     <img src="../assets/logo.png">
+  <a class="log-out" (click)="onLogout()"
+  *ngIf="isTheCurrentUser()">
+    Выйти
+  </a>
 </header>

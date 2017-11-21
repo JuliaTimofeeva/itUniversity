@@ -16,8 +16,10 @@ export class WallPageComponent implements OnInit {
 
   ngOnInit() {
     var posts = JSON.parse(this.ls.getItemFromLS('record'));
-    for (var i=0; i<posts.item.length; i++){
-      this.posts.push({name: posts.item[i].name});
+    if(posts!=null) {
+      for (var i = 0; i < posts.item.length; i++) {
+        this.posts.push({name: posts.item[i].name});
+      }
     }
   }
 

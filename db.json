@@ -7,27 +7,16 @@
       "name": "Юля"
     },
     {
-      "email": "ulehka24fev@rambler.ru",
-      "password": "1234567",
-      "id": "xcgh"
-    },
-    {
-      "email": "ulehka24fev@rambler.ru",
-      "password": "1234567890",
-      "name": "sdfvgh",
+      "email": "email1@email.ru",
+      "password": "123123",
+      "name": "lolol1",
       "id": 2
     },
     {
-      "email": "ulehka24fev@rambler.ru",
-      "password": "12345678",
-      "name": "sdfghj",
+      "email": "qwe@fsdd",
+      "password": "123123",
+      "name": "sdfsdfsdf",
       "id": 3
-    },
-    {
-      "email": "drgtdrt@gfa.ru",
-      "password": "1234567",
-      "name": "sdfghj",
-      "id": 4
     }
   ],
   "posts": [
@@ -46,5 +35,8 @@
   ],
   "profile": {
     "name": "typicode"
+  },
+  "test": {
+    "name": "sdfsdf"
   }
 }

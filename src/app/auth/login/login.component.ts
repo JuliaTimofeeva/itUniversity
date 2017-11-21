@@ -24,6 +24,12 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    if (this.usersService.getcurrentUser()) {
+      this.router.navigate(['/wall-page']);
+    }
+
+
     this.message =new Message('danger','');
     this.route.queryParams.subscribe((params: Params)=>{
       if(params['nowCanLogin']){
@@ -46,39 +52,40 @@ export class LoginComponent implements OnInit {
 }
   onSubmit(){
 
-    this.usersService.test();
-
-    // console.log(this.form);
-    // const formData = this.form.value;
-    //
-    // this.usersService.getUserByEmail(formData.email)
-    //   .subscribe((user: User)=>{
-    //     console.log(user);
-    //     if(user){
-    //       if(user.password === formData.password){
-    //         this.message.text = '';
-    //         window.localStorage.setItem('user',JSON.stringify(user));
-    //         //logic
-    //         this.authService.login();
-    //          this.router.navigate(['/wall-page']);
-    //       }else{
-    //         this.showMessage({
-    //           text:"Неверный пароль",
-    //           type: 'danger'
-    //         })
-    //       }
-    //     }else{
-    //       this.showMessage({
-    //         text:"Такого пользователя не существует",
-    //         type: 'danger'
-    //       });
-    //     }
-    //   });
 
 
+    console.log(this.form);
+    const formData = this.form.value;
 
+    console.log()
 
-
+    this.usersService.getUserByEmail(formData.email)
+      .subscribe((user: User)=>{
+        console.log(user);
+        if(user){
+          if(user.password === formData.password){
+            this.message.text = '';
+            window.localStorage.setItem('user',JSON.stringify(user));
+            //logic
+            /***/
+            this.usersService.setcurrentUser(user);
+            console.log(this.usersService.getcurrentUser());
+            /***/
+            this.authService.login();
+             this.router.navigate(['/wall-page']);
+          }else{
+            this.showMessage({
+              text:"Неверный пароль",
+              type: 'danger'
+            })
+          }
+        }else{
+          this.showMessage({
+            text:"Такого пользователя не существует",
+            type: 'danger'
+          });
+        }
+      });
 }
 
 }
