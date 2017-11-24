@@ -49,4 +49,10 @@ export class UsersService {
 
   }
 
+  getAllUsers(): Observable<User[]>{
+    return this.http.get('http://localhost:9000/users/getAllUsers')
+      .map((response: Response) => response.json())
+      .map((users: User[]) => users.length > 0 ? users : []);
+  }
+
 }

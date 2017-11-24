@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   }
 
   isTheCurrentUser(){
-    console.log(this.usersService.getcurrentUser());
+    //console.log(this.usersService.getcurrentUser());
     return this.usersService.getcurrentUser();
   }
 

@@ -1,13 +1,14 @@
 <app-menu></app-menu>
-<label>Name</label>
-<input class = "change-name" type="text" [(ngModel)]="name"/><br>
-<label>Surname</label>
-<input class = "change-surname" type="text" [(ngModel)]="surname"/><br>
-<label>Nickname</label>
-<input class = "change-nickname" type="text" [(ngModel)]="nickname"/>
+<div class = "setting">
+  <label>Name</label>
+  <input class = "change-name form-control underlined" type="text" [(ngModel)]="name"/><br>
+  <label>Surname</label>
+  <input class = "change-surname form-control underlined" type="text" [(ngModel)]="surname"/><br>
+  <label>Nickname</label>
+  <input class = "change-nickname form-control underlined" type="text" [(ngModel)]="nickname"/>
 
-<button id ="save" (click)="onSave()">Сохранить</button>
+  <button class="btn btn-default btn-lg" id ="save" (click)="onSave() ">Сохранить</button>
 
-<input type="file"  (change)="fileChange($event)" />
-<!--<div id="res"></div>-->
-<img id='output' src="{{bfn}}">
+  <input  type="file"  (change)="fileChange($event)" />
+  <img id='output' src="{{bfn}}">
+</div>

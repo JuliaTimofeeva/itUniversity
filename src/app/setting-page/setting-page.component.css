@@ -1,3 +1,7 @@
-
+@import url(~bootstrap/dist/css/bootstrap.min.css);
+.setting {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 50px; }
 
 /*# sourceMappingURL=setting-page.component.css.map */

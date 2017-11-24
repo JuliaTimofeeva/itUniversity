@@ -20,6 +20,8 @@ import {AppRoutingModule} from "./app-routing.module";
 import {UsersService} from "./users/users.service";
 import {Http, HttpModule} from "@angular/http";
 import {AuthService} from "./auth/auth.sevice";
+import { PeoplePageComponent } from './people-page/people-page.component';
+import { PeopleRowComponent } from './people-row/people-row.component';
 
 
 
@@ -29,7 +31,8 @@ const routes = [
   {path:'group-page', component: GroupPageComponent},
   {path:'wall-page', component: WallPageComponent},
   {path:'setting-page', component: SettingPageComponent},
-  {path:'login-page', component: LoginPageComponent}
+  {path:'login-page', component: LoginPageComponent},
+  {path:'people-page', component: PeoplePageComponent}
 ];
 @NgModule({
   declarations: [
@@ -45,6 +48,8 @@ const routes = [
     SettingPageComponent,
     LoginPageComponent,
     MenuComponent,
+    PeoplePageComponent,
+    PeopleRowComponent,
 
   ],
   imports: [

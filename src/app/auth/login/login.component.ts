@@ -54,14 +54,16 @@ export class LoginComponent implements OnInit {
 
 
 
-    console.log(this.form);
+
+
+
+    //console.log(this.form);
     const formData = this.form.value;
 
-    console.log()
 
     this.usersService.getUserByEmail(formData.email)
       .subscribe((user: User)=>{
-        console.log(user);
+        //console.log(user);
         if(user){
           if(user.password === formData.password){
             this.message.text = '';
@@ -69,7 +71,7 @@ export class LoginComponent implements OnInit {
             //logic
             /***/
             this.usersService.setcurrentUser(user);
-            console.log(this.usersService.getcurrentUser());
+            //console.log(this.usersService.getcurrentUser());
             /***/
             this.authService.login();
              this.router.navigate(['/wall-page']);
