@@ -1,25 +1,7 @@
 <app-menu></app-menu>
-<!--<div *ngFor="let item of listPeople">-->
-  <!--<ul>-->
-  <!--<li>{{item}}</li>-->
-  <!--</ul>-->
-<!--</div>-->
 
-<app-people-row *ngFor="let item of listPeople" [people]="item">
-</app-people-row>
+<div class = "people-container">
+  <app-people-row *ngFor="let item of listPeople"  [people]=item>
+  </app-people-row>
+</div>
 
-
-<!--<div class = "list-container">-->
-  <!--<div class = "list-people" *ngFor="let item of listPeople">-->
-    <!--&lt;!&ndash;<ul>&ndash;&gt;-->
-      <!--&lt;!&ndash;<li>{{item}}</li>&ndash;&gt;-->
-      <!--&lt;!&ndash;<button>&ndash;&gt;-->
-        <!--&lt;!&ndash;Написать&ndash;&gt;-->
-      <!--&lt;!&ndash;</button>&ndash;&gt;-->
-    <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-    <!---->
-    <!--&lt;!&ndash;<ul>&ndash;&gt;-->
-      <!--&lt;!&ndash;<li><app-people-row></app-people-row></li>&ndash;&gt;-->
-    <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-  <!--</div>-->
-<!--</div>-->

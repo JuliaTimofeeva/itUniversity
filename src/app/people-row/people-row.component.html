@@ -1,8 +1,17 @@
 <div class = "user-container">
   <div class = "user">
-    {{people}}
+    {{people.name}} {{people.surname}}
   </div>
-  <button (click)="onClick()">
+  <button id = "btn-send" class="button-send"  (click)="onWriteClick()">
   Написать
   </button>
+  <div id ="{{people.email}}" class = "opn">
+    <textarea [(ngModel)]="text"></textarea><br>
+    <button (click) = "onSendClick()">
+      Отправить
+    </button>
+    <button (click)="onCancelClick()">
+      Отмена
+    </button>
+  </div>
 </div>

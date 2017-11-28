@@ -17,11 +17,14 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {AuthModule} from "./auth/auth.module";
 import {AppRoutingModule} from "./app-routing.module";
-import {UsersService} from "./users/users.service";
+import {UsersService} from "./services/users.service";
+import {MessagesService} from "./services/messages.service";
 import {Http, HttpModule} from "@angular/http";
 import {AuthService} from "./auth/auth.sevice";
 import { PeoplePageComponent } from './people-page/people-page.component';
 import { PeopleRowComponent } from './people-row/people-row.component';
+import { MessagePageComponent } from './message-page/message-page.component';
+import { MessageRowComponent } from './message-row/message-row.component';
 
 
 
@@ -32,7 +35,8 @@ const routes = [
   {path:'wall-page', component: WallPageComponent},
   {path:'setting-page', component: SettingPageComponent},
   {path:'login-page', component: LoginPageComponent},
-  {path:'people-page', component: PeoplePageComponent}
+  {path:'people-page', component: PeoplePageComponent},
+  {path:'message-page', component: MessagePageComponent}
 ];
 @NgModule({
   declarations: [
@@ -50,6 +54,8 @@ const routes = [
     MenuComponent,
     PeoplePageComponent,
     PeopleRowComponent,
+    MessagePageComponent,
+    MessageRowComponent,
 
   ],
   imports: [
@@ -60,7 +66,7 @@ const routes = [
     AppRoutingModule,
     HttpModule
   ],
-  providers: [UsersService, AuthService],
+  providers: [UsersService, AuthService, MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

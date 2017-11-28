@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAe;EACb,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,IAAI;EAChB,gBAAgB,EAAE,OAAO;EACzB,aAAa,EAAE,GAAG;;AACpB,KAAK;EACH,OAAO,EAAE,YAAY;EACrB,WAAW,EAAE,IAAI;EACjB,WAAW,EAAE,GAAG;;AAClB,YAAY;EACV,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,IAAI;EAChB,YAAY,EAAE,GAAG",
+"sources": ["message-row.component.sass"],
+"names": [],
+"file": "message-row.component.css"
+}

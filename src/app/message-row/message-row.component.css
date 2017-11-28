@@ -1,15 +1,9 @@
-@import url(~bootstrap/dist/css/bootstrap.min.css);
 .user-container {
   width: 500px;
   margin: 0 auto;
   min-height: 50px;
   background-color: #dcdcdc;
   margin-bottom: 5px; }
-
-.opn {
-  display: none;
-  margin: 0 auto;
-  width: 180px; }
 
 .user {
   display: inline-block;
@@ -21,4 +15,4 @@
   margin-top: 15px;
   margin-right: 5px; }
 
-/*# sourceMappingURL=people-row.component.css.map */
+/*# sourceMappingURL=message-row.component.css.map */

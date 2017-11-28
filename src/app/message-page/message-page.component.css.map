@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAiB;EACf,WAAW,EAAE,IAAI",
+"sources": ["message-page.component.sass"],
+"names": [],
+"file": "message-page.component.css"
+}

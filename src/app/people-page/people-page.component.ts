@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {UsersService} from "../users/users.service";
-import {User} from "../users/user.module";
+import {UsersService} from "../services/users.service";
+import {User} from "../models/user.model";
 
 @Component({
   selector: 'app-people-page',
@@ -21,9 +21,12 @@ export class PeoplePageComponent implements OnInit {
       (users : User[]) => {
        this.people = JSON.stringify(users);
         if (users != null){
-          for(var i=0;i<users.length;i++){
-            console.log(this.listPeople[i] ='Email:'+users[i].email+' '+'Name:'+ users[i].name);
-          }
+          this.listPeople = users;
+          // for(var i=0;i<users.length;i++){
+          //   // console.log(this.listPeople[i] ='Email:'+users[i].email+' '+'Name:'+ users[i].name);
+          //   console.log(this.listPeople[i] ='Email:'+users[i].email+' '+'Name:'+ users[i].name);
+          // }
+
         }
 
       }

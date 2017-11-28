@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators} from "@angular/forms";
-import {UsersService} from "../../users/users.service";
-import {User} from "../../users/user.module";
+import {UsersService} from "../../services/users.service";
+import {User} from "../../models/user.model";
 import {Router} from "@angular/router";
 
 @Component({
@@ -22,13 +22,14 @@ export class RegistrationComponent implements OnInit {
       'email': new FormControl(null, [Validators.required, Validators.email], this.forbiddenEmails.bind(this)),
       'password': new FormControl(null, [Validators.required, Validators.minLength(6)]),
       'name': new FormControl(null, [Validators.required]),
-      'agree': new FormControl(false, [Validators.requiredTrue])
+      // 'agree': new FormControl(false, [Validators.requiredTrue])
+      'surname': new FormControl(null, [Validators.required]),
     });
   }
 
   onSubmit() {
-    const {email, password, name} = this.form.value;
-    const user = new User(email, password, name);
+    const {email, password, name, surname} = this.form.value;
+    const user = new User(email, password, name, surname);
     this.userService.createNewUser(user)
       .subscribe(() => {
         this.router.navigate(['/login'], {
