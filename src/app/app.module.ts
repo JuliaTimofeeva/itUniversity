@@ -25,6 +25,7 @@ import { PeoplePageComponent } from './people-page/people-page.component';
 import { PeopleRowComponent } from './people-row/people-row.component';
 import { MessagePageComponent } from './message-page/message-page.component';
 import { MessageRowComponent } from './message-row/message-row.component';
+import { ChatPageComponent } from './chat-page/chat-page.component';
 
 
 
@@ -36,7 +37,8 @@ const routes = [
   {path:'setting-page', component: SettingPageComponent},
   {path:'login-page', component: LoginPageComponent},
   {path:'people-page', component: PeoplePageComponent},
-  {path:'message-page', component: MessagePageComponent}
+  {path:'message-page', component: MessagePageComponent},
+  {path:'chat-page', component: ChatPageComponent}
 ];
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ const routes = [
     PeopleRowComponent,
     MessagePageComponent,
     MessageRowComponent,
+    ChatPageComponent,
 
   ],
   imports: [

@@ -25,7 +25,6 @@ export class PeopleRowComponent implements OnInit {
     user = this.people;
     console.log(this.people);
     console.log(user.name);
-  //  alert("hi, "+this.people.name);
    document.getElementById(this.people.email).style.display = 'block';
    document.getElementById("btn-send").style.display = 'none';
   }

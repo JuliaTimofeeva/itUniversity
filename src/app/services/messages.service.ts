@@ -1,5 +1,5 @@
 import { Http, Response } from '@angular/http';
-import { Injectable } from '@angular/core';
+import {Injectable, Input} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import {User} from "../models/user.model";
 import {Message} from "../models/message.model";
@@ -10,6 +10,14 @@ import {Message} from "../models/message.model";
 export class MessagesService {
 
   constructor(private http: Http) {}
+
+  getcurrentChatUser(): User {
+    return JSON.parse(window.sessionStorage.getItem('currentChatUser'));
+  }
+
+  setcurrentChatUser(value: User) {
+    window.sessionStorage.setItem('currentChatUser',JSON.stringify(value));
+  }
 
 
   sendMessage(message: Message): Observable<string>{
@@ -24,13 +32,13 @@ export class MessagesService {
       .map((response: Response) => response.json());
   }
 
-  // getMessagesBySenderReceiver(sender: string, receiver: string): Observable<Message[]> {
-  //   console.log(sender);
-  //   return this.http.get(`http://localhost:9000/messages/getMessagesBySenderReceiver/${sender}/${receiver}`)
-  //     .map((response: Response) => response.json());
-  // }
+  getMessagesBySenderReceiver(sender: string, receiver: string): Observable<Message[]> {
+    console.log(sender);
+    return this.http.get(`http://localhost:9000/messages/getMessagesBySenderReceiver/${sender}/${receiver}`)
+      .map((response: Response) => response.json());
+  }
 
-  getAllChatUsersWithSender(sender: string): Observable<Message[]> {
+  getAllChatUsersWithSender(sender: string): Observable<User[]> {
     console.log(sender);
     return this.http.get(`http://localhost:9000/messages/getAllChatUsersWithSender/${sender}`)
       .map((response: Response) => response.json());

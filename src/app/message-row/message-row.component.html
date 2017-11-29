@@ -1,9 +1,10 @@
 
-<div class = "user-container">
+<div *ngIf="chatUserIsNoCurrentUser()" class = "user-container">
   <div class = "user">
-    {{message.name}} {{message.surname}}
+    {{chatUser.name}} {{chatUser.surname}}
   </div>
-  <button  class="button-send"  (click)="onOpenClick()">
+  <a routerLink="/chat-page" (click)="onOpenClick()">
     Открыть переписку
-  </button>
+  </a>
+
 </div>

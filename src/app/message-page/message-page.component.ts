@@ -18,21 +18,16 @@ export class MessagePageComponent implements OnInit {
     private usersService: UsersService
   ) { }
 
-  message: string; //people
-  listMessages = []; //listPeople
-  listUser: any;
+  listChatUsers = []; //listPeople
 
   ngOnInit() {
 
 
-    console.log("hi");
-
     console.log(this.messagesService.getAllChatUsersWithSender(
       this.usersService.getcurrentUser().email).subscribe(
-      (message : Message[]) => {
-       this.message = JSON.stringify(message);
-        if (message != null) {
-          this.listMessages = message;
+      (chatUsers : User[]) => {
+        if (chatUsers != null) {
+          this.listChatUsers = chatUsers;
 
         }
       }
@@ -42,18 +37,5 @@ export class MessagePageComponent implements OnInit {
 
 
   }
-
-    ///////////
-//     console.log("tyt");
-//     console.log(this.messagesService.(this.usersService.getcurrentUser().email).subscribe(
-//       (users : Message[]) => {
-//         this.people = JSON.stringify(users);
-//         if (users != null){
-//           this.listPeople = users;
-//
-//
-//   }
-//
-// }));
   }
 
