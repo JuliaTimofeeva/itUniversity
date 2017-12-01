@@ -19,22 +19,13 @@ export class ChatPageComponent implements OnInit {
   // @Input() message;
 
   ngOnInit() {
-    let receiver;
-    receiver = this.message;
-
-    console.log('111111111111111111111111111'+ receiver);
-
 
     console.log(this.messagesService.getMessagesBySenderReceiver(
       this.usersService.getcurrentUser().email,
       // "test@test.ru"
       this.messagesService.getcurrentChatUser().email
-      // receiver
-      // this.listMessages[0].receiver
       ).subscribe(
       (messages : Message[]) => {
-        //this.message = JSON.stringify(message);
-        // debugger
         if (messages != null) {
           this.listMessages = messages
           ;

@@ -49,6 +49,12 @@ export class UsersService {
 
   }
 
+  updateUser(user: User): Observable<User>{
+    return this.http.post('http://localhost:9000/users/update', user)
+      .map((response: Response) => response.json());
+
+  }
+
   getAllUsers(): Observable<User[]>{
     return this.http.get('http://localhost:9000/users/getAllUsers')
       .map((response: Response) => response.json())

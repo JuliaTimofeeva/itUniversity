@@ -26,6 +26,11 @@ import { PeopleRowComponent } from './people-row/people-row.component';
 import { MessagePageComponent } from './message-page/message-page.component';
 import { MessageRowComponent } from './message-row/message-row.component';
 import { ChatPageComponent } from './chat-page/chat-page.component';
+import {DatePickerComponent} from "ngx-bootstrap";
+import { UsersPageComponent } from './users-page/users-page.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
 
 
 
@@ -59,6 +64,7 @@ const routes = [
     MessagePageComponent,
     MessageRowComponent,
     ChatPageComponent,
+    UsersPageComponent
 
   ],
   imports: [
@@ -67,7 +73,10 @@ const routes = [
     FormsModule,
     AuthModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
+
+
   ],
   providers: [UsersService, AuthService, MessagesService],
   bootstrap: [AppComponent]

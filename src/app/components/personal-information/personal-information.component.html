@@ -1,10 +1,14 @@
 <div class="aboutMe">
   <!--<img src="../assets/girl.png">-->
-  <img src="{{avatar}}">
+  <img *ngIf="avatar!=null" src="{{avatar}}">
+  <img *ngIf="avatar==null" src="../assets/NotFoundPhoto.png">
   <div class = "description">
     <h1 class = "name-person">{{name}}</h1>
     <h1 class = "surname-person">{{surname}}</h1>
     <h2 class = "nickname">{{nickname}}</h2>
+    <h2 class = "nickname">{{sex}}</h2>
+    <h2 class = "nickname">{{birthdate}}</h2>
+    <h2 class = "nickname">{{city}}</h2>
   </div>
 </div>
 <div class = "tabs">

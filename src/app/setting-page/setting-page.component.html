@@ -1,14 +1,32 @@
 <app-menu></app-menu>
 <div class = "setting">
-  <label>Name</label>
-  <input class = "change-name form-control underlined" type="text" [(ngModel)]="name"/><br>
-  <label>Surname</label>
-  <input class = "change-surname form-control underlined" type="text" [(ngModel)]="surname"/><br>
-  <label>Nickname</label>
+  <label>Имя:</label>
+  <input class = "change-name form-control underlined" type="text"  [(ngModel)]="name"/><br>
+  <label>Фамилия:</label>
+  <input class = "change-surname form-control underlined" type="text"  [(ngModel)]="surname"/><br>
+  <label>Nickname:</label>
   <input class = "change-nickname form-control underlined" type="text" [(ngModel)]="nickname"/>
+
+
+    <div class="form-group">
+      <label >Введите дату:</label>
+      <input type="date" class="form-control" [(ngModel)]="birthdate"/>
+    </div>
+    <select [(ngModel)]="sex" class = "categories">
+      <option disabled>Выберите пол</option>
+      <option>Женский</option>
+      <option>Мужской</option>
+    </select><br>
+
+    <label>Введите город:</label>
+    <input class = "change-city form-control underlined" type="text" [(ngModel)]="city"/>
+
+
+
+
 
   <button class="btn btn-default btn-lg" id ="save" (click)="onSave() ">Сохранить</button>
 
   <input  type="file"  (change)="fileChange($event)" />
-  <img id='output' src="{{bfn}}">
+  <img id='output' src="{{avatar}}">
 </div>

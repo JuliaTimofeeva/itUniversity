@@ -21,4 +21,9 @@
   margin-top: 15px;
   margin-right: 5px; }
 
+.alert {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 5px; }
+
 /*# sourceMappingURL=people-row.component.css.map */

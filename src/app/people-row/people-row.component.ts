@@ -1,8 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, NgModule} from '@angular/core';
 import {User} from "../models/user.model";
 import {Message} from "../models/message.model";
 import {MessagesService} from "../services/messages.service";
 import {UsersService} from "../services/users.service";
+
+import {MatButtonModule, MatCheckboxModule, MatList} from '@angular/material';
 
 @Component({
   selector: 'app-people-row',
@@ -43,6 +45,14 @@ export class PeopleRowComponent implements OnInit {
       }
     );
 
+    document.getElementById(this.people.email).style.display = "none";
+    this.text = "";
+    document.getElementById("btn-send").style.display = 'block';
+    document.getElementById("win").style.display = 'block';
+
+    window.setTimeout(()=>{
+      document.getElementById("win").style.display = 'none';
+        }, 3000);
   }
 
 

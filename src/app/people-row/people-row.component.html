@@ -1,3 +1,6 @@
+<div id ="win" class="alert alert-success" style="display: none">
+  Сообщение отправлено успешно.
+</div>
 <div class = "user-container">
   <div class = "user">
     {{people.name}} {{people.surname}}
@@ -6,7 +9,7 @@
   Написать
   </button>
   <div id ="{{people.email}}" class = "opn">
-    <textarea [(ngModel)]="text"></textarea><br>
+    <textarea id = "msg-txt" [(ngModel)]="text"></textarea><br>
     <button (click) = "onSendClick()">
       Отправить
     </button>
@@ -15,3 +18,11 @@
     </button>
   </div>
 </div>
+
+<!--<mat-checkbox>mm</mat-checkbox>-->
+<!--<mat-list>-->
+  <!--<mat-list-item> Pepper </mat-list-item>-->
+  <!--<mat-list-item> Salt </mat-list-item>-->
+  <!--<mat-list-item> Paprika </mat-list-item>-->
+<!--</mat-list>-->
+
