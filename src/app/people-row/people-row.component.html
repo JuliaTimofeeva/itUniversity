@@ -4,15 +4,15 @@
 <div class = "user-container">
   <div class = "user">
     <a routerLink="/users-page" (click)="routerLinkClick()">
-      <img *ngIf="people.avatar!=null"src="{{people.avatar}}" style="width: 50px">
-      <img *ngIf="people.avatar==null"src="../assets/NotFoundPhoto.png" style="width: 50px">
+      <img class="img-circle" *ngIf="people.avatar!=null"src="{{people.avatar}}" style="width: 60px;height: 60px">
+      <img class="img-circle" *ngIf="people.avatar==null"src="../assets/NotFoundPhoto.png" style="width: 50px;height: 60px">
       {{people.name}}
       {{people.surname}}
     </a>
   </div>
-  <button *ngIf ="writeBtnShow" id = "btn-send" class="button-send" (click)="onWriteClick()">
-  Написать
-  </button>
+  <a *ngIf ="writeBtnShow" id = "btn-send" class="button-send" (click)="onWriteClick()">
+    <span class="glyphicon glyphicon-envelope"></span>
+  </a>
   <div id ="{{people.email}}" class = "opn">
     <textarea id = "msg-txt" [(ngModel)]="text"></textarea><br>
     <button (click) = "onSendClick()">
@@ -23,6 +23,8 @@
     </button>
   </div>
 </div>
+
+
 
 <!--<mat-checkbox></mat-checkbox>-->
 <!--<mat-list>-->

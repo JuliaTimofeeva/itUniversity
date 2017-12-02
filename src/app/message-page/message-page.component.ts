@@ -13,10 +13,9 @@ import {combineAll} from "rxjs/operator/combineAll";
 })
 export class MessagePageComponent implements OnInit {
 
-  constructor(
-    private messagesService: MessagesService,
-    private usersService: UsersService
-  ) { }
+  constructor(private messagesService: MessagesService,
+              private usersService: UsersService) {
+  }
 
   listChatUsers = []; //listPeople
 
@@ -25,17 +24,16 @@ export class MessagePageComponent implements OnInit {
 
     console.log(this.messagesService.getAllChatUsersWithSender(
       this.usersService.getcurrentUser().email).subscribe(
-      (chatUsers : User[]) => {
+      (chatUsers: User[]) => {
         if (chatUsers != null) {
           this.listChatUsers = chatUsers;
 
         }
       }
-
       )
     );
-
-
   }
+
+
   }
 

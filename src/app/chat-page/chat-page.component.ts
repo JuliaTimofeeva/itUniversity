@@ -16,11 +16,11 @@ export class ChatPageComponent implements OnInit {
 
   message: string; //people
   listMessages = []; //listPeople
-  // @Input() message;
+
 
   ngOnInit() {
 
-    console.log(this.messagesService.getMessagesBySenderReceiver(
+    this.messagesService.getMessagesBySenderReceiver(
       this.usersService.getcurrentUser().email,
       // "test@test.ru"
       this.messagesService.getcurrentChatUser().email
@@ -32,10 +32,22 @@ export class ChatPageComponent implements OnInit {
         }
       }
       )
-    );
   }
 
+  text: string;
 
+  onSendClick(){
+    const message = new Message(this.text, this.usersService.getcurrentUser().email, this.messagesService.getcurrentChatUser().email);
+    this.listMessages.push(message);
+    console.log(message);
+    let str = this.messagesService.sendMessage(message).subscribe(
+      (str : string) => {
+        console.log(str);
+      }
+    );
+    this.text = "";
+
+  }
 
 
 

@@ -16,7 +16,6 @@ export class PeoplePageComponent implements OnInit {
   constructor(private userService: UsersService) { }
 
   ngOnInit() {
-    console.log('test');
     console.log(this.userService.getAllUsers().subscribe(
       (users : User[]) => {
        this.people = JSON.stringify(users);

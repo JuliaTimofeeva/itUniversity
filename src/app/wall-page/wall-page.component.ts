@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {LSService} from '../LSService';
 import {UsersService} from "../services/users.service";
 import {User} from "../models/user.model";
+import {PostsService} from "../services/posts.service";
+import {Post} from "../models/post.model";
 
 @Component({
   selector: 'app-wall-page',
@@ -22,19 +24,10 @@ export class WallPageComponent implements OnInit {
   sex: string;
   city: string;
   birthdate: Date;
-  constructor(private ls:LSService,
-              private userService: UsersService) { }
+  constructor(private userService: UsersService,
+              private postService: PostsService) { }
 
   ngOnInit() {
-    var posts = JSON.parse(this.ls.getItemFromLS('record'));
-    if(posts!=null) {
-      for (var i = 0; i < posts.item.length; i++) {
-        this.posts.push({name: posts.item[i].name});
-      }
-    }
-
-
-
     let user: User;
     user = this.userService.getcurrentUser();
 
@@ -47,7 +40,7 @@ export class WallPageComponent implements OnInit {
       this.birthdate = user.birthdate;
     }
     if (user.city != null){
-      this.nickname = user.city;
+      this.city = user.city;
     }
     if (user.sex != null){
       this.sex = user.sex;
@@ -58,11 +51,24 @@ export class WallPageComponent implements OnInit {
     if (user.city != null){
       this.city = user.city;
     }
+
+    this.postService.getWall(user.email).subscribe(
+      (posts : Post[]) => {
+        if (posts != null) {
+          this.posts = posts;
+          ;
+        }
+      }
+    );
   }
 
-
   onClick(){
-    this.posts.push({name: this.post});
-    this.ls.setItemToLS('record','{"item":'+JSON.stringify(this.posts)+'}');
+    const post = new Post(this.post, this.userService.getcurrentUser().email);
+    this.posts.unshift(post);
+    this.postService.sendPost(post).subscribe(
+      (str : string) => {
+        console.log(str);
+      }
+    );
   }
 }

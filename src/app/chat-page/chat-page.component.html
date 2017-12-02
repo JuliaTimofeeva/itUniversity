@@ -1,11 +1,15 @@
 <app-menu></app-menu>
 <p>
-  <!--chat-page works!-->
   <span *ngFor="let mess of listMessages">
     Oтправитель:{{mess.sender}} Текст сообщения:{{mess.text}}<br>
   </span>
-  <!--{{message}}-->
-  <!--{{a(message)}}-->
+
 </p>
-<!--<app-chat-page *ngFor="let item of listMessages" [message]=item >-->
-<!--</app-chat-page>-->
+
+<div  class = "opn">
+  <textarea id = "msg-txt" [(ngModel)]="text"></textarea><br>
+  <button (click) = "onSendClick()">
+    Отправить
+  </button>
+</div>
+

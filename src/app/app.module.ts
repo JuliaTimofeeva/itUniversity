@@ -19,6 +19,7 @@ import {AuthModule} from "./auth/auth.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {UsersService} from "./services/users.service";
 import {MessagesService} from "./services/messages.service";
+import {PostsService} from "./services/posts.service";
 import {Http, HttpModule} from "@angular/http";
 import {AuthService} from "./auth/auth.sevice";
 import { PeoplePageComponent } from './people-page/people-page.component';
@@ -80,7 +81,7 @@ const routes = [
 
 
   ],
-  providers: [UsersService, AuthService, MessagesService],
+  providers: [UsersService, AuthService, MessagesService, PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
