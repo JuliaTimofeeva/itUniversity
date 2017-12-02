@@ -3,7 +3,12 @@
 </div>
 <div class = "user-container">
   <div class = "user">
-    <a routerLink="/users-page" (click)="routerLinkClick()">{{people.name}} {{people.surname}}</a>
+    <a routerLink="/users-page" (click)="routerLinkClick()">
+      <img *ngIf="people.avatar!=null"src="{{people.avatar}}" style="width: 50px">
+      <img *ngIf="people.avatar==null"src="../assets/NotFoundPhoto.png" style="width: 50px">
+      {{people.name}}
+      {{people.surname}}
+    </a>
   </div>
   <button *ngIf ="writeBtnShow" id = "btn-send" class="button-send" (click)="onWriteClick()">
   Написать

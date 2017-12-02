@@ -1,7 +1,10 @@
 
 <div *ngIf="chatUserIsNoCurrentUser()" class = "user-container">
   <div class = "user">
-    {{chatUser.name}} {{chatUser.surname}}
+    <img *ngIf="chatUser.avatar!=null"src="{{chatUser.avatar}}" style="width: 50px">
+    <img *ngIf="chatUser.avatar==null"src="../assets/NotFoundPhoto.png" style="width: 50px">
+    {{chatUser.name}}
+    {{chatUser.surname}}
   </div>
   <a routerLink="/chat-page" (click)="onOpenClick()">
     Открыть переписку
