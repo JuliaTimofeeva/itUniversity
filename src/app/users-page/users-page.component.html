@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <main>
-  <!--<app-personal-information></app-personal-information>-->
-  <div class="aboutMe">
+  <div class="aboutMe" >
+
     <!--<img src="../assets/girl.png">-->
     <img *ngIf="avatar!=null" src="{{avatar}}">
     <img *ngIf="avatar==null" src="../assets/NotFoundPhoto.png">
@@ -14,15 +14,16 @@
       <h2 class = "nickname">{{city}}</h2>
     </div>
   </div>
-  <div class = "entry-post">
-    <textarea class="entry" placeholder="enter" [(ngModel)]="post"></textarea>
-    <button  (click)="onClick()">
-      SEND
-    </button>
-  </div>
-  <div class = "posts" *ngFor="let post of posts">
-    <ul>
-      <li>{{post.name}}</li>
-    </ul>
-  </div>
+  <!--<div class = "entry-post">-->
+    <!--<textarea class="entry" placeholder="enter" [(ngModel)]="post"></textarea>-->
+    <!--<button  (click)="onClick()">-->
+      <!--SEND-->
+    <!--</button>-->
+  <!--</div>-->
+  <!--<div class = "posts" *ngFor="let post of posts">-->
+    <!--<ul>-->
+      <!--<li>{{post.name}}</li>-->
+    <!--</ul>-->
+  <!--</div>-->
 </main>
+

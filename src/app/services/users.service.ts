@@ -24,6 +24,16 @@ export class UsersService {
     //this._currentUser = value;
   }
 
+  getPeopleToView(): User {
+    return JSON.parse(window.sessionStorage.getItem('peopleToView'));
+    //return this._currentUser;
+  }
+
+  setPeopleToView(value: User) {
+    window.sessionStorage.setItem('peopleToView',JSON.stringify(value));
+    //this._currentUser = value;
+  }
+
   //private _currentUser: User;
 
   /***/

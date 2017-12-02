@@ -36,6 +36,10 @@ export class PeopleRowComponent implements OnInit {
     document.getElementById(this.people.email).style.display = 'none';
   }
 
+  routerLinkClick(){
+    this.usersService.setPeopleToView(this.people);
+  }
+
   onSendClick(){
 
     const message = new Message(this.text, this.usersService.getcurrentUser().email, this.people.email);

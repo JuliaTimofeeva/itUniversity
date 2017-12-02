@@ -44,7 +44,8 @@ const routes = [
   {path:'login-page', component: LoginPageComponent},
   {path:'people-page', component: PeoplePageComponent},
   {path:'message-page', component: MessagePageComponent},
-  {path:'chat-page', component: ChatPageComponent}
+  {path:'chat-page', component: ChatPageComponent},
+  {path:'users-page', component: UsersPageComponent}
 ];
 @NgModule({
   declarations: [
