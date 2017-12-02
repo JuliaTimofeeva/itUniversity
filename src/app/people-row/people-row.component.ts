@@ -4,7 +4,7 @@ import {Message} from "../models/message.model";
 import {MessagesService} from "../services/messages.service";
 import {UsersService} from "../services/users.service";
 
-import {MatButtonModule, MatCheckboxModule, MatList} from '@angular/material';
+// import {MatButtonModule, MatCheckboxModule, MatList} from '@angular/material';
 
 @Component({
   selector: 'app-people-row',
@@ -21,6 +21,7 @@ export class PeopleRowComponent implements OnInit {
   @Input() people;
 
   text : string;
+  writeBtnShow;
 
   onWriteClick(){
     let user;
@@ -28,11 +29,11 @@ export class PeopleRowComponent implements OnInit {
     console.log(this.people);
     console.log(user.name);
    document.getElementById(this.people.email).style.display = 'block';
-   document.getElementById("btn-send").style.display = 'none';
+   this.writeBtnShow = false;
   }
   onCancelClick(){
+    this.writeBtnShow = true;
     document.getElementById(this.people.email).style.display = 'none';
-    document.getElementById("btn-send").style.display = 'block';
   }
 
   onSendClick(){
@@ -47,7 +48,7 @@ export class PeopleRowComponent implements OnInit {
 
     document.getElementById(this.people.email).style.display = "none";
     this.text = "";
-    document.getElementById("btn-send").style.display = 'block';
+    this.writeBtnShow = true;
     document.getElementById("win").style.display = 'block';
 
     window.setTimeout(()=>{
@@ -57,6 +58,7 @@ export class PeopleRowComponent implements OnInit {
 
 
   ngOnInit() {
+    this.writeBtnShow = true;
   }
 
 }

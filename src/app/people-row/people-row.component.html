@@ -5,7 +5,7 @@
   <div class = "user">
     {{people.name}} {{people.surname}}
   </div>
-  <button id = "btn-send" class="button-send"  (click)="onWriteClick()">
+  <button *ngIf ="writeBtnShow" id = "btn-send" class="button-send" (click)="onWriteClick()">
   Написать
   </button>
   <div id ="{{people.email}}" class = "opn">
@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<!--<mat-checkbox>mm</mat-checkbox>-->
+<!--<mat-checkbox></mat-checkbox>-->
 <!--<mat-list>-->
   <!--<mat-list-item> Pepper </mat-list-item>-->
   <!--<mat-list-item> Salt </mat-list-item>-->
