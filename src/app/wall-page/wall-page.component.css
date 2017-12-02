@@ -4,7 +4,8 @@
 
 main {
   background-color: #f9f6f6;
-  font-family: "Open Sans Condensed", sans-serif; }
+  font-family: "Open Sans Condensed", sans-serif;
+  background-image: url("../../assets/bckgd_body.png"); }
   main .container {
     display: flex;
     height: 600px;

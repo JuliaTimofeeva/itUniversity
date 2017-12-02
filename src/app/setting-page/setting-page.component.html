@@ -1,4 +1,5 @@
-<app-menu></app-menu>
+<!--<app-menu></app-menu>-->
+<main>
 <div class = "setting">
   <label>Имя:</label>
   <input class = "change-name form-control underlined" type="text"  [(ngModel)]="name"/><br>
@@ -30,3 +31,5 @@
   <input  type="file"  (change)="fileChange($event)" />
   <img id='output' src="{{avatar}}">
 </div>
+
+</main>

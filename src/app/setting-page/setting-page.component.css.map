@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAQ,kDAAuC;AAE/C,QAAQ;EACN,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,IAAI",
+"mappings": "AAAQ,kDAAuC;AAE/C,QAAQ;EACN,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,IAAI;;AAElB,CAAC;EACC,gBAAgB,EAAE,kCAAkC",
 "sources": ["setting-page.component.sass"],
 "names": [],
 "file": "setting-page.component.css"

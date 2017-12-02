@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UsersService} from "../../services/users.service";
 import {AuthService} from "../../auth/auth.sevice";
 import {Router} from "@angular/router";
+import {$} from "protractor";
 
 @Component({
   selector: 'app-header',
@@ -10,24 +11,33 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(
-    /**/private usersService: UsersService/**/,
-    private authService: AuthService,
-    private router: Router
-  ) { }
-
-  ngOnInit() {
+  constructor(/**/private usersService: UsersService/**/,
+              private authService: AuthService,
+              private router: Router) {
   }
 
-  isTheCurrentUser(){
+  hd = "header";
+
+  ngOnInit() {
+    window.onscroll = function() {
+      var y = window.scrollY;
+      if(y>10) {
+        document.getElementById('hd').className = "header small";
+      }else if(y<10){
+        document.getElementById('hd').className = "header";
+      }
+    }
+  }
+
+
+  isTheCurrentUser() {
     //console.log(this.usersService.getcurrentUser());
     return this.usersService.getcurrentUser();
   }
 
-  onLogout(){
+  onLogout() {
     // window.sessionStorage.clear();
     this.authService.logout();
     this.router.navigate(['/login']);
   }
-
 }

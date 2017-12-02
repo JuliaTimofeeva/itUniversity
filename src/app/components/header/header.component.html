@@ -1,9 +1,22 @@
-<header>
-    <img src="../assets/logo.png">
-  <a class="log-out" (click)="onLogout()"
-  *ngIf="isTheCurrentUser()">
-    Выйти
-  </a>
-</header>
+<!--<header>-->
+    <!--<img src="../assets/logo.png">-->
+  <!--<a class="log-out" (click)="onLogout()"-->
+  <!--*ngIf="isTheCurrentUser()">-->
+    <!--Выйти-->
+  <!--</a>-->
+<!--</header>-->
 
+
+
+<div id="hd" class="header">
+    <h1 class="header_logo">Social network</h1>
+  <a class="log-out" (click)="onLogout()"
+    *ngIf="isTheCurrentUser()">
+    Выйти
+    </a>
+  </div>
+  <div class="offset">
+    <!--<p>Scroll down to initiate resizing of the page header.</p>-->
+    <app-menu *ngIf="isTheCurrentUser()"></app-menu>
+  </div>
 
