@@ -3,13 +3,19 @@
   width: 500px;
   margin: 0 auto;
   min-height: 50px;
-  background-color: #dcdcdc;
-  margin-bottom: 5px; }
+  margin-bottom: 35px;
+  border-left: double 5px lightblue;
+  background-color: white;
+  padding-bottom: 10px; }
 
 .opn {
   display: none;
   margin: 0 auto;
-  width: 180px; }
+  width: 300px;
+  margin-top: 10px; }
+
+textarea {
+  resize: none; }
 
 .user {
   display: inline-block;
@@ -18,8 +24,8 @@
 
 .button-send {
   float: right;
-  margin-top: 15px;
-  margin-right: 5px; }
+  margin-top: 30px;
+  margin-right: 10px; }
 
 .alert {
   width: 500px;

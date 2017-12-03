@@ -4,8 +4,6 @@ import {Message} from "../models/message.model";
 import {MessagesService} from "../services/messages.service";
 import {UsersService} from "../services/users.service";
 
-// import {MatButtonModule, MatCheckboxModule, MatList} from '@angular/material';
-
 @Component({
   selector: 'app-people-row',
   templateUrl: './people-row.component.html',

@@ -12,7 +12,9 @@
 .people-container {
   padding-top: 70px; }
 
-* {
+main {
+  margin: 0;
+  padding: 0;
   background-image: url("../../assets/bckgd_body.png"); }
 
 /*# sourceMappingURL=people-page.component.css.map */

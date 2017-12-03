@@ -11,25 +11,18 @@
     </a>
   </div>
   <a *ngIf ="writeBtnShow" id = "btn-send" class="button-send" (click)="onWriteClick()">
-    <span class="glyphicon glyphicon-envelope"></span>
+    <!--<span class="glyphicon glyphicon-envelope"></span>-->
+    <i class="fa fa-envelope" aria-hidden="true"></i>
+
   </a>
   <div id ="{{people.email}}" class = "opn">
-    <textarea id = "msg-txt" [(ngModel)]="text"></textarea><br>
-    <button (click) = "onSendClick()">
+    <textarea rows="5" cols="40" id = "msg-txt" [(ngModel)]="text"></textarea><br>
+    <button type="button" class="btn btn-primary-outline" (click) = "onSendClick()">
       Отправить
     </button>
-    <button (click)="onCancelClick()">
+    <button type="button" class="btn btn-primary-outline" (click)="onCancelClick()">
       Отмена
     </button>
   </div>
 </div>
-
-
-
-<!--<mat-checkbox></mat-checkbox>-->
-<!--<mat-list>-->
-  <!--<mat-list-item> Pepper </mat-list-item>-->
-  <!--<mat-list-item> Salt </mat-list-item>-->
-  <!--<mat-list-item> Paprika </mat-list-item>-->
-<!--</mat-list>-->
 

@@ -1,7 +1,7 @@
 @import url(~bootstrap/dist/css/bootstrap.min.css);
 main {
   background-image: url("../../assets/bckgd_body.png");
-  min-height: 800px; }
+  min-height: 1000px; }
 
 .w3-card {
   width: 400px;
@@ -25,5 +25,9 @@ textarea {
     margin-top: 15px; }
     .posts ul li {
       border-bottom: solid 1px lightblue; }
+
+img .w3-card {
+  margin: 0 auto;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=users-page.component.css.map */
