@@ -70,5 +70,6 @@ export class WallPageComponent implements OnInit {
         console.log(str);
       }
     );
+    this.post = "";
   }
 }
