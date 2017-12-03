@@ -6,7 +6,8 @@ body {
   margin-top: 0;
   padding-top: 270px;
   text-align: center;
-  transition: 0.3s; }
+  transition: 0.3s;
+  background-color: lemonchiffon; }
 
 .header {
   position: fixed;
