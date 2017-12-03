@@ -4,12 +4,12 @@
     <h4 class="w3-center">{{name}} {{surname}}</h4>
     <p class="w3-center">
       <img *ngIf="avatar!=null" src="{{avatar}}" class="w3-circle" style="height:150px;width:150px" alt="Avatar"></p>
-      <img *ngIf="avatar==null" src="../assets/NotFoundPhoto.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar">
+      <img *ngIf="avatar==null" src="../assets/NotFoundPhoto.png" class="w3-circle" style="height:150px;width:150px" alt="Avatar">
     <hr>
-    <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> {{nickname}}</p>
-    <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> {{city}}</p>
-    <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> {{birthdate}}</p>
-    <p><i class="fa fa-venus-mars fa-fw w3-margin-right w3-text-theme" aria-hidden="true"></i> {{sex}}</p>
+    <p *ngIf="nickname!=null"><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> {{nickname}}</p>
+    <p *ngIf="city!=null"><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> {{city}}</p>
+    <p *ngIf="birthdate!=null"><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> {{birthdate}}</p>
+    <p *ngIf="sex!=null"><i class="fa fa-venus-mars fa-fw w3-margin-right w3-text-theme" aria-hidden="true"></i> {{sex}}</p>
   </div>
 </div>
   <div class = "entry-post">

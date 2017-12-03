@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {UsersService} from "../services/users.service";
 import {User} from "../models/user.model";
+import {PostsService} from "../services/posts.service";
+import {Post} from "../models/post.model";
 
 @Component({
   selector: 'app-users-page',
@@ -9,7 +11,8 @@ import {User} from "../models/user.model";
 })
 export class UsersPageComponent implements OnInit {
 
-  constructor(private userService: UsersService) { }
+  constructor(private userService: UsersService,
+  private postService: PostsService ) { }
 
   peopleToView : User;
 
@@ -20,7 +23,8 @@ export class UsersPageComponent implements OnInit {
   sex: string;
   city: string;
   birthdate: Date;
-
+  post: string;
+  posts = [];
 
   ngOnInit() {
 
@@ -43,6 +47,15 @@ export class UsersPageComponent implements OnInit {
     if (this.peopleToView.birthdate!= null) {
       this.birthdate = this.peopleToView.birthdate;
     }
+
+    this.postService.getWall(this.peopleToView.email).subscribe(
+      (posts : Post[]) => {
+        if (posts != null) {
+          this.posts = posts;
+          ;
+        }
+      }
+    );
 
   }
 

@@ -21,7 +21,8 @@ textarea {
   width: 400px; }
   .posts ul {
     list-style-type: none;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-top: 15px; }
     .posts ul li {
       border-bottom: solid 1px lightblue; }
 

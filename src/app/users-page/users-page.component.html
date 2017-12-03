@@ -1,29 +1,41 @@
-<!--<app-menu></app-menu>-->
-<main>
-  <div class="aboutMe" >
 
-    <!--<img src="../assets/girl.png">-->
-    <img *ngIf="avatar!=null" src="{{avatar}}">
-    <img *ngIf="avatar==null" src="../assets/NotFoundPhoto.png">
-    <div class = "description">
-      <h1 class = "name-person">{{name}}</h1>
-      <h1 class = "surname-person">{{surname}}</h1>
-      <h2 class = "nickname">{{nickname}}</h2>
-      <h2 class = "nickname">{{sex}}</h2>
-      <h2 class = "nickname">{{birthdate}}</h2>
-      <h2 class = "nickname">{{city}}</h2>
+<!--<main>-->
+  <!--<div class="aboutMe" >-->
+
+    <!--&lt;!&ndash;<img src="../assets/girl.png">&ndash;&gt;-->
+    <!--<img *ngIf="avatar!=null" src="{{avatar}}">-->
+    <!--<img *ngIf="avatar==null" src="../assets/NotFoundPhoto.png">-->
+    <!--<div class = "description">-->
+      <!--<h1 class = "name-person">{{name}}</h1>-->
+      <!--<h1 class = "surname-person">{{surname}}</h1>-->
+      <!--<h2 class = "nickname">{{nickname}}</h2>-->
+      <!--<h2 class = "nickname">{{sex}}</h2>-->
+      <!--<h2 class = "nickname">{{birthdate}}</h2>-->
+      <!--<h2 class = "nickname">{{city}}</h2>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</main>-->
+
+<main>
+  <div class="w3-card w3-round w3-white">
+    <div class="w3-container">
+      <h4 class="w3-center">{{name}} {{surname}}</h4>
+      <p class="w3-center">
+        <img *ngIf="avatar!=null" src="{{avatar}}" class="w3-circle"  style="height:150px;width:150px" alt="Avatar"></p>
+      <img *ngIf="avatar==null" src="../assets/NotFoundPhoto.png" class="w3-circle" style="height:150px;width:150px" alt="Avatar">
+      <hr>
+      <p *ngIf="nickname!=null"><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> {{nickname}}</p>
+      <p *ngIf="city!=null"><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> {{city}}</p>
+      <p *ngIf="birthdate!=null"><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> {{birthdate}}</p>
+      <p *ngIf="sex!=null"><i class="fa fa-venus-mars fa-fw w3-margin-right w3-text-theme" aria-hidden="true"></i> {{sex}}</p>
     </div>
   </div>
-  <!--<div class = "entry-post">-->
-    <!--<textarea class="entry" placeholder="enter" [(ngModel)]="post"></textarea>-->
-    <!--<button  (click)="onClick()">-->
-      <!--SEND-->
-    <!--</button>-->
-  <!--</div>-->
-  <!--<div class = "posts" *ngFor="let post of posts">-->
-    <!--<ul>-->
-      <!--<li>{{post.name}}</li>-->
-    <!--</ul>-->
-  <!--</div>-->
-</main>
 
+  <div class = "posts" *ngFor="let post of posts">
+    <ul>
+      <li><i class="fa fa-lightbulb-o w3-text-theme" aria-hidden="true"></i>
+        {{post.text}}</li>
+    </ul>
+  </div>
+
+</main>
