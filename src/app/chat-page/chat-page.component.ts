@@ -17,6 +17,9 @@ export class ChatPageComponent implements OnInit {
   message: string; //people
   listMessages = []; //listPeople
 
+  crntUser: string;
+  crntChatUser: string;
+
 
   ngOnInit() {
 
@@ -30,8 +33,11 @@ export class ChatPageComponent implements OnInit {
           this.listMessages = messages
           ;
         }
+        this.crntChatUser = this.messagesService.getcurrentChatUser().name+" "+ this.messagesService.getcurrentChatUser().surname;
       }
-      )
+      );
+
+    this.crntUser = this.usersService.getcurrentUser().name + " " + this.usersService.getcurrentUser().surname;
   }
 
   text: string;
@@ -48,6 +54,11 @@ export class ChatPageComponent implements OnInit {
     this.text = "";
 
   }
+
+  getCurrentUser(){
+    return this.usersService.getcurrentUser().email;
+  }
+
 
 
 

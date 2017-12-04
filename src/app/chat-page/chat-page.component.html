@@ -1,15 +1,37 @@
-<!--<app-menu></app-menu>-->
-<p>
-  <span *ngFor="let mess of listMessages">
-    Oтправитель:{{mess.sender}} Текст сообщения:{{mess.text}}<br>
-  </span>
 
-</p>
+<!--<p>-->
+  <!--<span *ngFor="let mess of listMessages">-->
+    <!--Oтправитель:{{mess.sender}} Текст сообщения:{{mess.text}}<br>-->
+  <!--</span>-->
 
+<!--</p>-->
+
+<!--<div  class = "opn">-->
+  <!--<textarea id = "msg-txt" [(ngModel)]="text"></textarea><br>-->
+  <!--<button (click) = "onSendClick()">-->
+    <!--Отправить-->
+  <!--</button>-->
+<!--</div>-->
+
+<div class = "container">
+    <div *ngFor="let mess of listMessages">
+      <div class ="sender-block" *ngIf="getCurrentUser()== mess.sender" style="float: right" >
+        <span >От кого:{{crntUser}}</span>
+        <div  *ngIf="getCurrentUser()== mess.sender" class="arrow_box" style="width: 300px; min-height: 100px;">
+          Текст сообщения:{{mess.text}}
+        </div><br>
+      </div>
+      <div class="receiver" *ngIf="getCurrentUser()!= mess.sender" style="float: left">
+       <span> Кому: {{crntChatUser}} </span>
+        <div   class="arrow_box_two" style="width: 300px; min-height: 100px;">
+          Текст сообщения:{{mess.text}}
+        </div><br>
+      </div>
+    </div>
+</div>
 <div  class = "opn">
-  <textarea id = "msg-txt" [(ngModel)]="text"></textarea><br>
+  <textarea cols="80" rows="5" id = "msg-txt" [(ngModel)]="text"></textarea><br>
   <button (click) = "onSendClick()">
     Отправить
   </button>
 </div>
-

@@ -16,7 +16,8 @@ body {
   font-weight: bold;
   text-align: center;
   background: gold;
-  transition: 0.3s; }
+  transition: 0.3s;
+  z-index: 1; }
   .header.small {
     height: 70px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
