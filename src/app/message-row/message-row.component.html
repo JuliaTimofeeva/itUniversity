@@ -1,8 +1,8 @@
 <main>
   <div *ngIf="chatUserIsNoCurrentUser()" class = "user-container">
     <div class = "user">
-      <img class="img-circle"  *ngIf="chatUser.avatar!=null"src="{{chatUser.avatar}}" style="width: 50px;height: 60px">
-      <img class="img-circle" *ngIf="chatUser.avatar==null"src="../assets/NotFoundPhoto.png" style="width: 50px;height: 60px">
+      <img class="img-circle"  *ngIf="chatUser.avatar!=null"src="{{chatUser.avatar}}" style="width: 60px;height: 60px">
+      <img class="img-circle" *ngIf="chatUser.avatar==null"src="../assets/NotFoundPhoto.png" style="width: 60px;height: 60px">
       {{chatUser.name}}
       {{chatUser.surname}}
     </div>

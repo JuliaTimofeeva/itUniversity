@@ -62,5 +62,7 @@ export class PeopleRowComponent implements OnInit {
   ngOnInit() {
     this.writeBtnShow = true;
   }
-
+  chatUserIsNoCurrentUser(){
+    return this.usersService.getcurrentUser().email != this.people.email;
+  }
 }

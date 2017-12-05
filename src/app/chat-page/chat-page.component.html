@@ -18,13 +18,13 @@
       <div class ="sender-block" *ngIf="getCurrentUser()== mess.sender" style="float: right" >
         <span >От кого:{{crntUser}}</span>
         <div  *ngIf="getCurrentUser()== mess.sender" class="arrow_box" style="width: 300px; min-height: 100px;">
-          Текст сообщения:{{mess.text}}
+         <p style="margin-left: 10px;margin-top: 5px"> {{mess.text}}</p>
         </div><br>
       </div>
       <div class="receiver" *ngIf="getCurrentUser()!= mess.sender" style="float: left">
        <span> Кому: {{crntChatUser}} </span>
         <div   class="arrow_box_two" style="width: 300px; min-height: 100px;">
-          Текст сообщения:{{mess.text}}
+         <p style="margin-left: 10px;margin-top: 5px">{{mess.text}}</p>
         </div><br>
       </div>
     </div>

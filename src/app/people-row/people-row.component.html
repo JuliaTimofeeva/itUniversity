@@ -1,7 +1,7 @@
 <div id ="win" class="alert alert-success" style="display: none">
   Сообщение отправлено успешно.
 </div>
-<div class = "user-container">
+<div  *ngIf="chatUserIsNoCurrentUser()" class = "user-container">
   <div class = "user">
     <a routerLink="/users-page" (click)="routerLinkClick()">
       <img class="img-circle" *ngIf="people.avatar!=null"src="{{people.avatar}}" style="width: 60px;height: 60px">

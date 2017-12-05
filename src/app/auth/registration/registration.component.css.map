@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAQ,kDAAuC",
+"mappings": "AAAQ,kDAAuC;AAE/C,eAAe;EACd,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,GAAG",
 "sources": ["registration.component.sass"],
 "names": [],
 "file": "registration.component.css"

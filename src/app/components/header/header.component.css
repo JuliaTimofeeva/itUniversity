@@ -36,4 +36,12 @@ body {
   text-shadow: 3px 4px rgba(0, 0, 0, 0.1);
   transition: 0.3s; }
 
+.log-out {
+  float: right;
+  margin-top: -45px;
+  margin-right: 10px; }
+  .log-out:hover {
+    color: #e33f0e;
+    cursor: pointer; }
+
 /*# sourceMappingURL=header.component.css.map */

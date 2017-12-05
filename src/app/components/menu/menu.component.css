@@ -8,7 +8,8 @@ nav {
     padding-right: 10px;
     margin-bottom: 5px; }
     nav li:hover {
-      color: #e33f0e; }
+      color: #e33f0e;
+      cursor: pointer; }
     nav li:last-child {
       border-right: none; }
 

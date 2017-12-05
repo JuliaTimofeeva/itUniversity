@@ -29,7 +29,7 @@
   <button class="btn btn-default btn-lg" id ="save" (click)="onSave() ">Сохранить</button>
 
   <input  type="file"  (change)="fileChange($event)" />
-  <img id='output' src="{{avatar}}">
+  <img *ngIf="avatar!=null" id='output' src="{{avatar}}" style="width: 100px; height: 100px;margin-bottom: 40px">
 </div>
 
 </main>
